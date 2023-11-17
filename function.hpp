@@ -9,5 +9,8 @@
 #define function_hpp
 
 #include <stdio.h>
+#include <iostream>
+void print_hello(void);
+void getinfo(void);
 
 #endif /* function_hpp */

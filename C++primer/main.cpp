@@ -6,9 +6,12 @@
 //
 
 #include <iostream>
+#include "function.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "change!\n";
+    
+//    print_hello();
+    getinfo();
+
     return 0;
 }
