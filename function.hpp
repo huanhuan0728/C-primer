@@ -12,5 +12,6 @@
 #include <iostream>
 void print_hello(void);
 void getinfo(void);
+void sqrt_(void);
 
 #endif /* function_hpp */

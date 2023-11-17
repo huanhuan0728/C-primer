@@ -11,7 +11,8 @@
 int main(int argc, const char * argv[]) {
     
 //    print_hello();
-    getinfo();
+//    getinfo();
+    sqrt_();
 
     return 0;
 }
