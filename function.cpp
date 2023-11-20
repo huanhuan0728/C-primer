@@ -39,3 +39,18 @@ void sqrt_(void){
     cout << "How fascinatig!" << endl;
     
 }
+
+void arrayone(void){
+    using namespace std;
+    
+    int yams[3];
+    yams[0] = 7;
+    yams[1] = 8;
+    yams[2] = 6;
+    
+    int yamcost[3] = {20, 30, 5};
+    cout << "Total yams = ";
+    cout << yams[0] + yams[1] + yams[2] << " yams cost ";
+    cout << "The package with " << yams[1] << " yams costs";
+    
+}

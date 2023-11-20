@@ -13,5 +13,6 @@
 void print_hello(void);
 void getinfo(void);
 void sqrt_(void);
+void arrayone(void);
 
 #endif /* function_hpp */
