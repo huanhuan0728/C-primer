@@ -19,6 +19,7 @@ void instr2 (void);
 void instr3 (void);
 void numstr (void);
 void strtype3(void);
+void strtype4(void);
 
 
 #endif /* function_hpp */
