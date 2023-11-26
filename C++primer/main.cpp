@@ -13,7 +13,8 @@ int main(int argc, const char * argv[]) {
 //    print_hello();
 //    getinfo();
 //    sqrt_();
-    arrayone();
+//    arrayone();
+    strtype3();
 
     return 0;
 }
