@@ -6,14 +6,14 @@
 //
 
 #include "function.hpp"
+using namespace std;
+
 
 void print_hello(void){
-    using namespace std;
     cout << "hello\n";
 }
 
 void getinfo(void){
-    using namespace std;
     
     int carrots;
     
@@ -26,7 +26,6 @@ void getinfo(void){
 }
 
 void sqrt_(void){
-    using namespace std;
     
     double area;
     cout << "Enter the floor area, in square feet, of your home: ";
@@ -41,7 +40,6 @@ void sqrt_(void){
 }
 
 void arrayone(void){
-    using namespace std;
     
     int yams[3];
     yams[0] = 7;
@@ -57,7 +55,6 @@ void arrayone(void){
 
 
 void instr1 (void){
-    using namespace std;
     const int ArSize = 20;
     char name[ArSize];
     char dessert[ArSize];
@@ -104,7 +101,6 @@ void instr3 (void){
 
 
 void numstr (void){
-    using namespace std;
     cout << "What year was your house built?\n";
     int year;
 //    cin >> year;
@@ -124,7 +120,6 @@ void numstr (void){
 
 
 void strtype3(void){
-    using namespace std;
     char charr1[20];
     char charr2[20] = "jaguar";
     string str1;
@@ -145,7 +140,6 @@ void strtype3(void){
 }
 
 void strtype4(){
-    using namespace std;
     char charr[20];
     string str;
     
@@ -161,3 +155,33 @@ void strtype4(){
 }
 
 
+void structur(void){
+    inflatable guest = {
+        "Glorious Gloria",
+        1.88,
+        29.99
+    };
+    
+    inflatable pal = {
+        "Audicous Arthur",
+        3.12,
+        32.99
+    };
+    
+    cout << "Expand your guest list with " << guest.name;
+    cout << "and" << pal.name << "!\n";
+    cout << "You can have both for $";
+    cout << guest.price + pal.price << "!\n";
+}
+
+
+void arrstruc(void){
+    inflatable guests[2] = {
+        {"Bambi", 0.5, 21.99},
+        {"God zilla", 2000, 565.99}
+    };
+    
+    cout << "The guests " << guests[0].name << " and " << guests[1].name
+    << "\nhave a combined volume of "
+    << guests[0].volume + guests[1].volume << " ciboc feet .\n";
+}

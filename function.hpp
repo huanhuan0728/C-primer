@@ -10,6 +10,13 @@
 
 #include <stdio.h>
 #include <iostream>
+
+struct inflatable{
+    char name[20];
+    float volume;
+    double price;
+};
+
 void print_hello(void);
 void getinfo(void);
 void sqrt_(void);
@@ -20,6 +27,7 @@ void instr3 (void);
 void numstr (void);
 void strtype3(void);
 void strtype4(void);
-
+void structur(void);
+void arrstruc(void);
 
 #endif /* function_hpp */
