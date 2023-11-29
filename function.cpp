@@ -185,3 +185,16 @@ void arrstruc(void){
     << "\nhave a combined volume of "
     << guests[0].volume + guests[1].volume << " ciboc feet .\n";
 }
+
+
+void pointer(void){
+    int updata = 6;
+    int *p_updata;
+    p_updata = &updata;
+    
+    cout << "Values: updatas = " << updata;
+    cout << ", p_updatas = " << *p_updata << endl;
+    
+    *p_updata = *p_updata+1;
+    cout << "Now updates = " << updata << endl;
+}

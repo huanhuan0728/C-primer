@@ -29,5 +29,6 @@ void strtype3(void);
 void strtype4(void);
 void structur(void);
 void arrstruc(void);
+void pointer(void);
 
 #endif /* function_hpp */
