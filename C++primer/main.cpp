@@ -14,7 +14,8 @@ int main(int argc, const char * argv[]) {
 //    getinfo();
 //    sqrt_();
 //    arrayone();
-    strtype3();
+//    strtype3();
+    use_new();
 
     return 0;
 }

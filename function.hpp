@@ -30,5 +30,7 @@ void strtype4(void);
 void structur(void);
 void arrstruc(void);
 void pointer(void);
+void init_ptr(void);
+void use_new(void);
 
 #endif /* function_hpp */

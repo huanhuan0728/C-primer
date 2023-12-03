@@ -198,3 +198,36 @@ void pointer(void){
     *p_updata = *p_updata+1;
     cout << "Now updates = " << updata << endl;
 }
+
+
+void init_ptr(void){
+    int higgens = 5;
+    int * pt = &higgens;
+    
+    cout << "Value of higgens = " << higgens
+    << "; Address of higgens = " << &higgens << endl;
+    cout << "Value of pt = " << *pt
+    << "; Value of pt = " << pt <<endl;
+}
+
+
+void use_new(void){
+    int nigth = 1001;
+    int *pt = new int;
+    *pt = 1001;
+    
+    cout << "night value  = ";
+    cout << nigth << ": location = " << &nigth << endl;
+    cout << " int ";
+    cout << "value = " << *pt << ": location = " << pt << endl;
+    double * pd = new double;
+    * pd = 100001.0;
+    
+    cout << "double ";
+    cout << "value = " << *pd << ": location = " << pd << endl;
+    cout << "lication of pointer pd: " << &pd << endl;
+    cout << "size of pt = " << sizeof(pt);
+    cout << ": size of *pt = " << sizeof(*pt) << endl;
+    cout << "size of pd = " << sizeof(pd);
+    cout << ": size of *pd = " << sizeof(*pd) << endl;
+}
