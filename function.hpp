@@ -32,5 +32,7 @@ void arrstruc(void);
 void pointer(void);
 void init_ptr(void);
 void use_new(void);
+void arraynew(void);
+void addpntrs(void);
 
 #endif /* function_hpp */

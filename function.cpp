@@ -231,3 +231,45 @@ void use_new(void){
     cout << "size of pd = " << sizeof(pd);
     cout << ": size of *pd = " << sizeof(*pd) << endl;
 }
+
+
+void arraynew(void){
+    double *p3 = new double [3];
+    p3[0] = 0.2;
+    p3[1] = 0.5;
+    p3[2] = 0.8;
+    cout << "p3[1] is " << p3[1] << "\n.";
+    p3 = p3 + 1;
+    cout << "Now p3[0] is " << p3[0] << " and";
+    cout << "p3[1] is " << p3[1] << ".\n";
+    p3 = p3 - 1;
+    delete [] p3;
+}
+
+
+void addpntrs(void){
+    double wages[3] = {1000.0, 2000.0, 3000.0};
+    short stacks[3] = {3, 2, 1};
+    
+    double * pw = wages;
+    short * ps = &stacks[0];
+    
+    cout << "pw = " << pw << ", *pw = " << *pw << endl;
+    pw = pw + 1;
+    cout << "add 1 to the pw pointer:\n";
+    cout << "pw = " << pw << ", *pw = " << *pw << endl;
+    cout << "ps = " << ps << ", *ps = " << *ps << endl;
+    ps = ps + 1;
+    cout << "add 1 to the ps pointer:\n";
+    cout << "ps = " << ps << ", *ps = " << *ps << "\n\n";
+    cout << "access two elements with array notation\n";
+    cout << "stacks[0] = " << stacks[0] <<
+    ", stack[1] = " << stacks[1] << endl;
+    cout << "access two elements with pointer notation\n"
+    << ", *(stacks + 1) = " << * (stacks + 1) << endl;
+    cout << sizeof(wages) << " *(stacks + 1) " << endl;
+    
+    cout << sizeof(wages) << " = size of wages array\n";
+    cout << sizeof(pw) << " = size of pw pointer\n";
+    
+}

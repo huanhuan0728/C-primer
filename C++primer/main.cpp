@@ -15,7 +15,8 @@ int main(int argc, const char * argv[]) {
 //    sqrt_();
 //    arrayone();
 //    strtype3();
-    use_new();
+//    use_new();
+    addpntrs();
 
     return 0;
 }
