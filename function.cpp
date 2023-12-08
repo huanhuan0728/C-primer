@@ -273,3 +273,49 @@ void addpntrs(void){
     cout << sizeof(pw) << " = size of pw pointer\n";
     
 }
+
+
+void ptrstr(void){
+    char animal[20] = "bear";
+    const char * bird = "wern";
+    char * ps;
+    
+    cout << animal << " and ";
+    cout << bird << "\n";
+    
+    cout << "Enter a kind of animal: ";
+    cin >> animal;
+    
+    ps = animal;
+    cout << ps << "!\n";
+    cout << "Before using strcpy():\n";
+    cout << animal << " at " << (int *) animal << endl;
+    cout << ps << " at " << (int *) animal << endl;
+    
+    ps = new char[strlen(animal) + 1];
+    strcpy(ps, animal);
+    cout << "After using strcpy(): \n";
+    cout << animal << " at " << (int *) animal << endl;
+    cout << ps << " at " << (int *) ps << endl;
+    delete [] ps;
+    
+}
+
+
+/*
+ 创建动态结构时，不能将成员运算符句点用于结构名，因为这种结构没有名称，只是知道它的地址。
+ C++为这种情况提供了一个运算符(->)
+ */
+void newstrct(void){
+    inflatable * ps = new inflatable;   // allot memory for structure
+    cout << "Enter name of infaltable item: ";
+    cin.get(ps->name, 20);
+    cout << "Enter volume in cubic feet: ";
+    cin >> (*ps).volume;
+    cout << "Enter price: $";
+    cin >> ps->price;
+    cout << "Name: " << (*ps).name << endl; // methed 1
+    cout << "Price: $" << ps->price << endl;    // method 2
+    
+    delete ps;
+}
