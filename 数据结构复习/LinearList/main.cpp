@@ -96,6 +96,16 @@ void PrintList(SqList &L){
         cout << L.data[i-1] << " " << endl;
 }
 
+void MergeList(SqList La, SqList Lb, SqList &Lc){
+    // 已知线性表La和Lb中的数据元素按值非递减排序
+    // 归并La和Lb得到新的线性表Lc，Lc的数据元素也按值非递减排列
+    InitList(Lc);
+    int i = 1, j = 1, k = 0;
+    
+    
+    
+}
+
 int main(int argc, const char * argv[]) {
     SqList L;
     InitList(L);
