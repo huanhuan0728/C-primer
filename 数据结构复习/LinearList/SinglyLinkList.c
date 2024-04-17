@@ -71,6 +71,56 @@ bool ListInsert(LinkList *L, int i, ElemType e){
     
     return true;
 }
+
+//  用尾插法创建单链表
+LinkList InitList_TailInsert(LinkList *L){
+    int x;
+    *L = (LNode *)malloc(sizeof(LNode));
+    LNode *s, *r = *L;
+    scanf("%d", &x);
+    while (x != 9999) {
+        s = (LNode *) malloc(sizeof(LNode));
+        s->data = x;
+        r->next = s;
+        r = r->next;
+        scanf("%d", &x);
+    }
+    r->next = NULL;
+    return *L;
+}
+
+// 用尾插法插入新元素
+bool List_TailInsert(LinkList *L, int e){
+    int x;
+    LNode *s = (LNode *)malloc(sizeof(LNode));
+    s->data = e;
+    LNode *q = *L;
+    // 寻找尾结点
+    while(q->next != NULL){
+        q = q->next;
+    }
+    q->next = s;
+    return true;
+}
+
+// 删除第i个结点，并用e返回删除的结点的值
+bool ListDelete(LinkList *L, int i, ElemType *e){
+    LNode *p = *L;  // 指针指向当前扫描到的结点
+    int j = 0;  // 记录当前位序
+    //  找到i-1个结点
+    while (p != NULL && j < i-1){
+        p = p->next;
+        j++;
+    }
+    if (p == NULL)   //i值不合法
+        return false;
+    LNode *q = p->next;
+    *e = q->data;
+    q = p->next;
+    p->next = q->next;
+    free(q);
+    return true;
+}
     
 void PrintList(LinkList *L){
     LNode *p = *L;
@@ -78,16 +128,22 @@ void PrintList(LinkList *L){
         printf("No data!");
         return;
     }
-    while (p->next != NULL) {
+    while (p != NULL) {
         printf("%d ", p->data);
         p = p->next;
     }
 }
     
 int main(int argc, const char * argv[]) {
+    int e;
     LinkList L = NULL;
     InitList(&L);
-    ListInsert(&L, 1, 1);
+//    ListInsert(&L, 1, 1);
+//    ListInsert(&L, 2, 2);
+//    ListDelete(&L, 1, &e);
+    List_TailInsert(&L, 1);
+    List_TailInsert(&L, 2);
     PrintList(&L);
+    
     return 0;
 }
